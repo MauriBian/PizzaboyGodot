@@ -14,6 +14,10 @@ config/name="Plataformero"
 run/main_scene="res://Escenas/Nivel1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=800
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
