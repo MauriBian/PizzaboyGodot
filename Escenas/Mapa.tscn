@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TileSet/TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/TileMap.gd" type="Script" id=2]
+
+[node name="Mapa" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1048576, 1, 0, 1048577, 1, 0, 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 0, 0, 1048589, 2, 0, 1048590, 2, 0, 1048591, 2, 0, 1048592, 2, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 2, 0, 1114126, 2, 0, 1114127, 2, 0, 1114128, 2, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 2, 0, 1179662, 2, 0, 1179663, 2, 0, 1179664, 2, 0 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+

@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/TileSet/tileset pequeño.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16.0331, 16.0372 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16.0213, 16.0696 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.9837, 16.0835 )
+
+[node name="TileEditor" type="Node2D"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Piso1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 16.6018, 15.8112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Piso1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso1/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Piso2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 16.0747, 79.3195 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Piso2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso2/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Piso3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 80.3736, 79.8465 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Piso3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso3/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+
