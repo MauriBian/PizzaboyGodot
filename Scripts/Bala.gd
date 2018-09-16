@@ -10,7 +10,7 @@ func _ready():
 	sprite = get_node("Sprite")
 	timer = Timer.new()
 	add_child(timer)
-	timer.wait_time = 3
+	timer.wait_time = 0.5
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	timer.start()
 
@@ -21,7 +21,7 @@ func _on_timer_timeout():
 func _physics_process(delta):
 	disparo()
 	choque()
-	
+
 func disparo():
 	collision = move_and_collide(Vector2(velocidad,0))
 
@@ -33,5 +33,7 @@ func cambiarDir():
 func choque():
 	if collision != null and collision.collider.get_meta("type") == "Enemigo":
 		collision.collider.perdiUnaVida()
+		self.queue_free()
+	elif collision != null:
 		self.queue_free()
 	

@@ -1,14 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Enemigo.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Enemigo/Papas/EnemigoPapas1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Enemigo/Papas/EnemigoPapas2.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Enemigo/Papas/EnemigoPapas3.png" type="Texture" id=4]
+[ext_resource path="res://Prefabs/Moneda.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Enemigo/Papas/EnemigoPapas1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemigo/Papas/EnemigoPapas2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemigo/Papas/EnemigoPapas3.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Caminando",
 "speed": 5.0
@@ -17,8 +18,8 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 10.0
-height = 42.0789
+radius = 12.9915
+height = 34.622
 
 [node name="EnemigoPapas" type="KinematicBody2D" index="0"]
 
@@ -30,6 +31,7 @@ script = ExtResource( 1 )
 gravedad = 0
 velMov = 0
 vida = 0
+list = [ ExtResource( 2 ) ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -44,14 +46,8 @@ shape = SubResource( 2 )
 
 enabled = true
 exclude_parent = true
-cast_to = Vector2( -120, 0 )
+cast_to = Vector2( -150, 0 )
 collision_mask = 1
-
-[node name="RayCast2D2" type="RayCast2D" parent="." index="3"]
-
-enabled = true
-exclude_parent = true
-cast_to = Vector2( -20, 0 )
-collision_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 
