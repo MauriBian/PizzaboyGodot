@@ -8,6 +8,7 @@ export var vida = 0
 var collision
 export var list = []
 var padre
+
 func _ready():
 	padre = get_parent()
 	set_meta("type","Enemigo")
