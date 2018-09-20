@@ -11,6 +11,7 @@ func _ready():
 func agarrarMoneda(target):
 	if target.name == "Personaje":
 		target.monedas += 1
+		target.monedas()
 		self.queue_free()
 		print(target.monedas)
 	

@@ -22,7 +22,7 @@ extents = Vector2( 15.9837, 16.0835 )
 custom_solver_bias = 0.0
 extents = Vector2( 15.8775, 13.4347 )
 
-[node name="TileEditor" type="Node2D"]
+[node name="TileEditor" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -113,7 +113,6 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piso3/StaticBody2D" index="0"]
 
 shape = SubResource( 3 )
-one_way_collision = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Arena" type="Sprite" parent="." index="4"]

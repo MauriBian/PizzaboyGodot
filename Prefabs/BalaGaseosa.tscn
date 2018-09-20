@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Bala.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Proyectiles/gaseosaproyectile.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 29.955
+height = 66.539
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+scale = Vector2( 1.0374, 1.0374 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+velocidad = 5
+soyBalaEnemiga = true
+tiempoDeVida = 1.0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -1, -2, 40, 29 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -0.633533, 0.571667 )
+scale = Vector2( 0.68626, 0.120407 )
+shape = SubResource( 1 )
+
+

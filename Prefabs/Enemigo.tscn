@@ -21,13 +21,14 @@ custom_solver_bias = 0.0
 radius = 12.9915
 height = 34.622
 
-[node name="EnemigoPapas" type="KinematicBody2D" index="0"]
+[node name="EnemigoPapas" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 gravedad = 0
 velMov = 0
 vida = 0
@@ -47,6 +48,14 @@ shape = SubResource( 2 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( -150, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="RayCast2D2" type="RayCast2D" parent="." index="3"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 150, 0 )
 collision_mask = 1
 _sections_unfolded = [ "Transform" ]
 

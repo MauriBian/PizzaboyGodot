@@ -19,9 +19,10 @@ var timer
 var puedoDisparar = true
 var monedas = 0
 func _ready():
+	
 	timer = Timer.new()
 	add_child(timer)
-	timer.wait_time = 0.3
+	timer.wait_time = 0.5
 	timer.connect("timeout",self,"rafaga")
 	self.set_meta("type","Personaje")
 	velocidad = velocidadMovimiento
@@ -57,9 +58,13 @@ func _physics_process(delta):
 func _process(delta):
 	Disparo()
 	puedoSaltar()
+	ToqueEnemigo()
 	
 func rafaga():
 	puedoDisparar = true
+
+func monedas():
+	gameManager.sumarMonedas(monedas) 
 
 func correr(delta):
 	if distanciaRecorrida > 2:
@@ -75,6 +80,10 @@ func Salto():
 		fuerzaSaltoRestante = salto
 		puedoSaltar = false
 		sprites.play("Salto")
+		
+func ToqueEnemigo():
+	if collision != null and collision.collider.get_meta("type") == "Enemigo":
+		collision.collider.golpieEnemigo(self)
 
 func pierdoUnaVida():
 	vida -= 1
@@ -96,12 +105,12 @@ func puedoSaltar():
 
 func gravedad():
 	collision = move_and_collide(Vector2(0,gravedad - fuerzaSaltoRestante))
+	
 
 func AnimarSiNoEstoyEnElAire(animacion):
 	if collision != null and collision.collider.get_meta("type") == "Piso" :
 		sprites.play(animacion)
 		
-
 
 
 		
@@ -123,7 +132,7 @@ func Disparo():
 	
 func estoyFlipando(numero,bala):
 	if sprites.flip_h:
-		bala.cambiarDir()
+		bala.cambiarDir(true)
 		return -numero
 	else:
 		return numero

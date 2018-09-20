@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Gaseosa.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/BalaGaseosa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Moneda.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Enemigo/Gaseosa/Gaseosafire.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Disparo"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 12.6358
+height = 33.1644
+
+[node name="Gaseosa" type="StaticBody2D"]
+
+position = Vector2( -6.70834, 6.70834 )
+scale = Vector2( 0.816564, 0.816564 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+bala = ExtResource( 2 )
+vida = 2
+list = [ ExtResource( 3 ) ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 4 )
+hframes = 3
+frame = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Disparo = SubResource( 1 )
+blend_times = [  ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 14.2597, 5.99019 )
+shape = SubResource( 2 )
+
+

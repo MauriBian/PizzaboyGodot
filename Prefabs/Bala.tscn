@@ -15,7 +15,9 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-velocidad = 8
+velocidad = 6
+soyBalaEnemiga = false
+tiempoDeVida = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -23,9 +25,10 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
+position = Vector2( -0.899582, -0.642559 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 3, 24, 20 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
 
 

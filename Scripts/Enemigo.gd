@@ -8,41 +8,45 @@ export var vida = 0
 var collision
 export var list = []
 var padre
+var raycast2
 
 func _ready():
+	raycast2 = get_node("RayCast2D2")
 	padre = get_parent()
 	set_meta("type","Enemigo")
 	raycast = get_node("RayCast2D")
 	sprite = get_node("AnimatedSprite")
 
-
 func _physics_process(delta):
-	personajeCerca(delta)
+	personajeCerca(delta,raycast,-1,false)
+	personajeCerca(delta,raycast2,1,true)
 	gravedad()
 	
 
 func _process(delta):
 	pass
 	
-func personajeCerca(delta):
-	if raycast.get_collider() != null and raycast.get_collider().name == "Personaje":
-		buscarAlPersonaje(move_and_collide(Vector2(-velMov,0)))
+func personajeCerca(delta,ray, dir,flip):
+	if ray.get_collider() != null and ray.get_collider().name == "Personaje":
+		colisionConPersonaje(move_and_collide(Vector2(dir * velMov,0)))
 		sprite.play("Caminando")
-		
+		sprite.flip_h = flip
+	
 
+func colisionConPersonaje(elPj):
+	if collision != null and collision.collider.name == "Personaje":
+		collision = elPj
+		golpieEnemigo(collision.collider)
+		
 func gravedad():
 	collision = move_and_collide(Vector2(0,gravedad))
-
-func buscarAlPersonaje(choque):
-	if collision != null and collision.collider.get_meta("type") == "Personaje":
-		collision = choque
-		golpieEnemigo(collision.collider)
+	
 		
 func golpieEnemigo(collider):
 	collider.pierdoUnaVida()
 	
 func puedoDropearItem():
-	if int(rand_range(2,4)) == 2:
+	if int(rand_range(1,5)) == 2:
 		var scene_instance = list [0] 
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Moneda")
@@ -53,5 +57,6 @@ func puedoDropearItem():
 func perdiUnaVida():
 	vida -= 1
 	if vida == 0:
+		padre.sumarPuntaje(100)
 		puedoDropearItem()
 		self.queue_free()
