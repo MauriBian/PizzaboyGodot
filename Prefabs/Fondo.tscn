@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Background/background_01_a_recolor.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Background/background_01_c_recolor.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Background/background_01_d_recolor.png" type="Texture" id=3]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+_sections_unfolded = [ "Scroll" ]
+
+[node name="Cielo" type="ParallaxLayer" parent="." index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1620, 1080 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Cielo" type="Sprite" parent="Cielo" index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -400 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Montañas" type="ParallaxLayer" parent="." index="1"]
+
+motion_scale = Vector2( 0.8, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 960, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Montañas" type="Sprite" parent="Montañas" index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -100 )
+_sections_unfolded = [ "Offset", "Visibility" ]
+
+[node name="Detalles" type="ParallaxLayer" parent="." index="2"]
+
+motion_scale = Vector2( 0.9, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 960, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Detalles" type="Sprite" parent="Detalles" index="0"]
+
+position = Vector2( 1.10791, 1.10803 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, 40 )
+_sections_unfolded = [ "Offset" ]
+
+

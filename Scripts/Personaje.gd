@@ -123,7 +123,7 @@ func Disparo():
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Bala")
 		gameManager.add_child(scene_instance)
-		scene_instance.translate(Vector2(self.position.x + estoyFlipando(30,scene_instance) ,self.position.y + 5))
+		scene_instance.translate(Vector2(self.position.x + estoyFlipando(40,scene_instance) ,self.position.y + 5))
 
 	
 

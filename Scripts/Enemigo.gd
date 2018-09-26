@@ -19,7 +19,7 @@ func _ready():
 
 func _physics_process(delta):
 	personajeCerca(delta,raycast,-1,false)
-	personajeCerca(delta,raycast2,1,true)
+	personajeCerca(delta,raycast2,2,true)
 	gravedad()
 	
 
@@ -27,7 +27,7 @@ func _process(delta):
 	pass
 	
 func personajeCerca(delta,ray, dir,flip):
-	if ray.get_collider() != null and ray.get_collider().name == "Personaje":
+	if ray.is_colliding() and  ray.get_collider() != null and ray.get_collider().name == "Personaje":
 		colisionConPersonaje(move_and_collide(Vector2(dir * velMov,0)))
 		sprite.play("Caminando")
 		sprite.flip_h = flip

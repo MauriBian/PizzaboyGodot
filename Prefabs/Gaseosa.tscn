@@ -32,8 +32,8 @@ height = 33.1644
 
 [node name="Gaseosa" type="StaticBody2D"]
 
-position = Vector2( -6.70834, 6.70834 )
-scale = Vector2( 0.816564, 0.816564 )
+position = Vector2( -7.02842, 7.02842 )
+scale = Vector2( 1.3355, 1.3355 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

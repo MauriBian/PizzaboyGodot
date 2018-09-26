@@ -23,15 +23,16 @@ height = 34.622
 
 [node name="EnemigoPapas" type="KinematicBody2D"]
 
+scale = Vector2( 1.40701, 1.40701 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Visibility" ]
-gravedad = 0
-velMov = 0
-vida = 0
+_sections_unfolded = [ "Transform", "Visibility" ]
+gravedad = 10
+velMov = 3
+vida = 2
 list = [ ExtResource( 2 ) ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]

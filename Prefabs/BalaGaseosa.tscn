@@ -11,7 +11,7 @@ height = 66.539
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
-scale = Vector2( 1.0374, 1.0374 )
+scale = Vector2( 1.55503, 1.55503 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -27,7 +27,7 @@ tiempoDeVida = 1.0
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( -1, -2, 40, 29 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 

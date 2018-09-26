@@ -48,7 +48,15 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="Piso4" type="Sprite" parent="." index="1"]
+[node name="Piso5" type="Sprite" parent="." index="1"]
+
+position = Vector2( 16.3812, 144.254 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 192, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Piso4" type="Sprite" parent="." index="2"]
 
 position = Vector2( 80.3734, 16.0747 )
 texture = ExtResource( 1 )
@@ -70,7 +78,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="Piso2" type="Sprite" parent="." index="2"]
+[node name="Piso2" type="Sprite" parent="." index="3"]
 
 position = Vector2( 16.0747, 79.3195 )
 texture = ExtResource( 1 )
@@ -92,7 +100,7 @@ bounce = 0.0
 
 shape = SubResource( 2 )
 
-[node name="Piso3" type="Sprite" parent="." index="3"]
+[node name="Piso3" type="Sprite" parent="." index="4"]
 
 position = Vector2( 80.3736, 79.8465 )
 texture = ExtResource( 1 )
@@ -115,7 +123,7 @@ bounce = 0.0
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Arena" type="Sprite" parent="." index="4"]
+[node name="Arena" type="Sprite" parent="." index="5"]
 
 position = Vector2( 144.033, 16.2879 )
 texture = ExtResource( 1 )
@@ -139,7 +147,7 @@ bounce = 0.0
 position = Vector2( 4.47983, 10.0137 )
 shape = SubResource( 4 )
 
-[node name="Arena2" type="Sprite" parent="." index="5"]
+[node name="Arena2" type="Sprite" parent="." index="6"]
 
 position = Vector2( 144.56, 79.796 )
 texture = ExtResource( 1 )

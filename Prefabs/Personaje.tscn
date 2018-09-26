@@ -1,65 +1,67 @@
 [gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/Personaje.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto2.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto3.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto4.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto5.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto6.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto7.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando1.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando2.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando3.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando4.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando5.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando6.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando7.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando8.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo1.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo2.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo3.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo4.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo5.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo6.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo7.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/TileSet/Corriendo/Personaje_Corriendo8.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Personaje/Normal/Personaje.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Personaje/Normal/Personaje_Idle1.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Personaje/Normal/Personaje_Idle2.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Personaje/Normal/Personaje_Idle3.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle1.png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle3.png" type="Texture" id=30]
-[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle2.png" type="Texture" id=31]
-[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle4.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando6.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando7.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Personaje/Caminando/Personaje_Caminando8.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto7.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo2.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo3.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo4.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo5.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo6.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo7.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Personaje/Corriendo/Personaje_Corriendo8.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Personaje/Normal/Personaje.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Personaje/Normal/Personaje_Idle1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Personaje/Normal/Personaje_Idle2.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Personaje/Normal/Personaje_Idle3.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle3.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle2.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Personaje/Idle/Personaje_Idle4.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto2.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto3.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Personaje/Salto/Personaje_Salto4.png" type="Texture" id=32]
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "Salto",
-"speed": 5.5
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "Caminando",
-"speed": 4.0
+"speed": 6.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "Cayendo",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "Corriendo",
-"speed": 7.0
+"speed": 8.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "Normal",
-"speed": 3.0
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "Salto",
+"speed": 6.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -68,8 +70,9 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 29.6349
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
+scale = Vector2( 1.35906, 1.35906 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

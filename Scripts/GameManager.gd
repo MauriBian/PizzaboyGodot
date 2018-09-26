@@ -1,8 +1,8 @@
 extends Node2D
 var puntaje
-
 var puntajeText
 var monedasText
+
 func _ready():
 	puntaje = 0
 	puntajeText = get_node("CanvasLayer/Puntaje")

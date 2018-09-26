@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Personaje_Corriendo3.png-fd9c123260140db9ff724911430ff11a.stex"
+path="res://.import/BikePlayer2A.png-e811a14382aebb00192933c305dc3a9b.stex"
 
 [deps]
 
-source_file="res://Sprites/TileSet/Corriendo/Personaje_Corriendo3.png"
-dest_files=[ "res://.import/Personaje_Corriendo3.png-fd9c123260140db9ff724911430ff11a.stex" ]
+source_file="res://Sprites/Boss/BikePlayer2A.png"
+dest_files=[ "res://.import/BikePlayer2A.png-e811a14382aebb00192933c305dc3a9b.stex" ]
 
 [params]
 

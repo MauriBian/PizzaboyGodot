@@ -8,16 +8,18 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Bala" type="KinematicBody2D"]
+[node name="Bala" type="KinematicBody2D" index="0"]
 
+scale = Vector2( 1.3681, 1.3681 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-velocidad = 6
+_sections_unfolded = [ "Transform" ]
+velocidad = 8
 soyBalaEnemiga = false
-tiempoDeVida = 0.8
+tiempoDeVida = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -25,10 +27,11 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( -0.899582, -0.642559 )
+modulate = Color( 0.765625, 0.757073, 0.218323, 1 )
+scale = Vector2( 1.03856, 1.03856 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 3, 24, 20 )
-_sections_unfolded = [ "Animation", "Offset", "Region" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility" ]
 
 

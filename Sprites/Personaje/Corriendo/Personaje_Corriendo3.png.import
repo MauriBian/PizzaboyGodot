@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Personaje_Corriendo4.png-790b45f7f77450938548486cd4a4b9a5.stex"
+path="res://.import/Personaje_Corriendo3.png-9848ce70c795ef5b17bb6bad0ae7c25f.stex"
 
 [deps]
 
-source_file="res://Sprites/TileSet/Corriendo/Personaje_Corriendo4.png"
-dest_files=[ "res://.import/Personaje_Corriendo4.png-790b45f7f77450938548486cd4a4b9a5.stex" ]
+source_file="res://Sprites/Personaje/Corriendo/Personaje_Corriendo3.png"
+dest_files=[ "res://.import/Personaje_Corriendo3.png-9848ce70c795ef5b17bb6bad0ae7c25f.stex" ]
 
 [params]
 
