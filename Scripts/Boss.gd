@@ -52,7 +52,7 @@ func Saltar(flip):
 		puedoSaltar = false
 		saltando.visible = true
 		normal.visible = false
-		animacionWilly.play("Saltando")
+		animacionWilly.play("Animacion")
 		saltoRestante = salto
 		saltando.flip_h = flip
 		estoyEnElAire = true

@@ -21,7 +21,7 @@ velocidadMovimiento = 3
 salto = 18
 velocidadExtra = 4
 bala = ExtResource( 3 )
-vida = 1
+vida = 20
 
 [node name="Camera2D" type="Camera2D" parent="GameManager/Personaje" index="2"]
 

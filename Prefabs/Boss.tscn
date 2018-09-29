@@ -149,7 +149,6 @@ position = Vector2( -0.647064, -30.0887 )
 texture = ExtResource( 3 )
 flip_h = true
 hframes = 2
-frame = 1
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="AnimacionNormal" type="AnimationPlayer" parent="." index="4"]

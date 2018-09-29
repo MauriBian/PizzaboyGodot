@@ -4,16 +4,18 @@ var puntajeText
 var monedasText
 
 func _ready():
-	puntaje = 0
+	
 	puntajeText = get_node("CanvasLayer/Puntaje")
 	monedasText = get_node("CanvasLayer/Salames")
-
+	puntajeText.text = String(Puntaje.puntaje)
+	monedasText.text = String(Puntaje.salames)
 func _process(delta):
 	pass
 	
 func sumarPuntaje(suma):
-	puntaje += suma
-	puntajeText.text = String(puntaje )
+	Puntaje.puntaje += suma
+	puntajeText.text = String(Puntaje.puntaje )
 	
 func sumarMonedas(monedas):
-	monedasText.text = String(monedas)
+	Puntaje.salames = monedas
+	monedasText.text = String(Puntaje.salames)
