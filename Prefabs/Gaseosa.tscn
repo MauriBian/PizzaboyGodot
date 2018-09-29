@@ -44,7 +44,7 @@ bounce = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 bala = ExtResource( 2 )
-vida = 2
+vida = 1
 list = [ ExtResource( 3 ) ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]

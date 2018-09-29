@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/Fondo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/FinalNivel.tscn" type="PackedScene" id=8]
 
-[node name="Nivel" type="Node2D"]
+[node name="Nivel" type="Node2D" index="0"]
 
 [node name="GameManager" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -34,7 +34,7 @@ zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
-limit_bottom = 10000000
+limit_bottom = 750
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -49,10 +49,11 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit" ]
 
 [node name="Mapa" parent="GameManager" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 3.01465, 0 )
+position = Vector2( 5.28662, 2.27209 )
 
 [node name="EnemigoPapas" parent="GameManager" index="3" instance=ExtResource( 5 )]
 
@@ -84,36 +85,72 @@ position = Vector2( 2970.93, 390.396 )
 
 [node name="EnemigoPapas10" parent="GameManager" index="10" instance=ExtResource( 5 )]
 
-position = Vector2( 3525.62, 211.025 )
+position = Vector2( 3505.11, 395.572 )
 
 [node name="EnemigoPapas11" parent="GameManager" index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 3977.82, 402.455 )
 
-[node name="EnemigoPapas6" parent="GameManager" index="12" instance=ExtResource( 5 )]
+[node name="EnemigoPapas12" parent="GameManager" index="12" instance=ExtResource( 5 )]
+
+position = Vector2( 4348.16, 263.86 )
+
+[node name="EnemigoPapas13" parent="GameManager" index="13" instance=ExtResource( 5 )]
+
+position = Vector2( 4454.95, 263.86 )
+
+[node name="EnemigoPapas14" parent="GameManager" index="14" instance=ExtResource( 5 )]
+
+position = Vector2( 4559.46, 266.132 )
+
+[node name="EnemigoPapas15" parent="GameManager" index="15" instance=ExtResource( 5 )]
+
+position = Vector2( 4670.79, 263.86 )
+
+[node name="EnemigoPapas16" parent="GameManager" index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 4820.75, 259.316 )
+
+[node name="EnemigoPapas17" parent="GameManager" index="17" instance=ExtResource( 5 )]
+
+position = Vector2( 6072.65, 270.676 )
+
+[node name="EnemigoPapas18" parent="GameManager" index="18" instance=ExtResource( 5 )]
+
+position = Vector2( 6320.3, 275.22 )
+
+[node name="EnemigoPapas6" parent="GameManager" index="19" instance=ExtResource( 5 )]
 
 position = Vector2( 2279.07, 593.885 )
 
-[node name="Gaseosa" parent="GameManager" index="13" instance=ExtResource( 6 )]
+[node name="Gaseosa" parent="GameManager" index="20" instance=ExtResource( 6 )]
 
 position = Vector2( 1067.69, 397.425 )
 
-[node name="Gaseosa2" parent="GameManager" index="14" instance=ExtResource( 6 )]
+[node name="Gaseosa2" parent="GameManager" index="21" instance=ExtResource( 6 )]
 
 position = Vector2( 2376.05, 362.756 )
 
-[node name="Gaseosa3" parent="GameManager" index="15" instance=ExtResource( 6 )]
+[node name="Gaseosa3" parent="GameManager" index="22" instance=ExtResource( 6 )]
 
-position = Vector2( 3224.67, 294.927 )
+position = Vector2( 3103.69, 368.746 )
 
-[node name="Gaseosa4" parent="GameManager" index="16" instance=ExtResource( 6 )]
+[node name="Gaseosa4" parent="GameManager" index="23" instance=ExtResource( 6 )]
 
 position = Vector2( 3734.14, 297.941 )
 
-[node name="ParallaxBackground" parent="GameManager" index="17" instance=ExtResource( 7 )]
+[node name="Gaseosa5" parent="GameManager" index="24" instance=ExtResource( 6 )]
 
-[node name="Area2D" parent="GameManager" index="18" instance=ExtResource( 8 )]
+position = Vector2( 5170.08, 263.86 )
 
-position = Vector2( 4559.48, 280.485 )
+[node name="Gaseosa6" parent="GameManager" index="25" instance=ExtResource( 6 )]
+
+position = Vector2( 5724.46, 268.404 )
+
+[node name="ParallaxBackground" parent="GameManager" index="26" instance=ExtResource( 7 )]
+
+[node name="Final" parent="GameManager" index="27" instance=ExtResource( 8 )]
+
+position = Vector2( 7301.33, 127.047 )
 
 

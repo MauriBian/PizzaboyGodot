@@ -6,9 +6,10 @@ var sprite
 var timer
 export var soyBalaEnemiga = false
 export(float) var tiempoDeVida = 0
-
+export var soyBoss = false
 
 func _ready():
+	set_meta("type","Bala")
 	sprite = get_node("Sprite")
 	balaEnemiga()
 	timer = Timer.new()
@@ -45,5 +46,5 @@ func choque():
 		queue_free()
 
 func balaEnemiga():
-	if soyBalaEnemiga:
+	if soyBalaEnemiga and !soyBoss:
 		cambiarDir(false)

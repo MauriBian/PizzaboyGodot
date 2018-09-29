@@ -8,7 +8,7 @@
 [ext_resource path="res://Prefabs/Fondo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Boss.tscn" type="PackedScene" id=7]
 
-[node name="NivelBoss" type="Node2D" index="0"]
+[node name="NivelBoss" type="Node2D"]
 
 _sections_unfolded = [ "Pause", "Transform", "Z Index" ]
 
@@ -36,11 +36,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ParallaxBackground" parent="GameManager" index="3" instance=ExtResource( 6 )]
 
-[node name="Boss" parent="GameManager" index="4" instance=ExtResource( 7 )]
-
-position = Vector2( 1098.45, 320.527 )
-
-[node name="Camera2D" type="Camera2D" parent="GameManager" index="5"]
+[node name="Camera2D" type="Camera2D" parent="GameManager" index="4"]
 
 position = Vector2( 824.075, 296.985 )
 scale = Vector2( 1.35906, 1.35906 )
@@ -67,5 +63,11 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
+
+[node name="Boss" parent="GameManager" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 1098.45, 320.527 )
+vida = 30
+salto = 15
 
 

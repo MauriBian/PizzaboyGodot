@@ -1,28 +1,29 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Boss.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Boss/BikePlayer2A.png" type="Texture" id=2]
-
-[sub_resource type="CapsuleShape2D" id=4]
-
-custom_solver_bias = 0.0
-radius = 30.5101
-height = 2.63138
+[ext_resource path="res://Sprites/Boss/BikePlayer2B.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Boss/BikePlayer2A.png" type="Texture" id=3]
+[ext_resource path="res://Animacion.tres" type="Animation" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 17.8345
+height = 28.5486
+
+[sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 50.0037
 height = 90.2641
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "Andando"
 length = 0.5
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Normal:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -34,14 +35,13 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "Dañado"
 length = 0.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/path = NodePath("Normal:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -53,7 +53,7 @@ tracks/0/keys = {
 "values": [ Color( 0.09375, 0.00842285, 0.00842285, 1 ), Color( 0.277344, 0.108337, 0.108337, 1 ), Color( 0.664063, 0.495453, 0.495453, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("Normal:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -63,6 +63,37 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 0, 1 ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "Dañado"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Willy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1, 3, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Willy:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.179688, 0.0456238, 0.0456238, 1 ), Color( 0.328125, 0.144836, 0.144836, 1 ), Color( 0.597656, 0.387543, 0.387543, 1 ), Color( 0.597656, 0.387543, 0.387543, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="Boss" type="KinematicBody2D"]
@@ -76,13 +107,14 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 gravedad = 9
 vida = 10
-velocidad = 10
+velocidad = 11
+salto = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( -0.961142, 5.16241 )
 scale = Vector2( 1.38569, 0.840101 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
@@ -98,27 +130,49 @@ audio_bus_name = "Master"
 
 position = Vector2( 1.27388, 5.09552 )
 scale = Vector2( 0.947279, 0.309409 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="." index="2"]
+[node name="Willy" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( -2.16622, -16.8963 )
+texture = ExtResource( 2 )
+hframes = 4
+frame = 3
+region_rect = Rect2( 0, 32, 128, 96 )
+_sections_unfolded = [ "Animation", "Region", "Transform", "Visibility" ]
+
+[node name="Normal" type="Sprite" parent="." index="3"]
 
 position = Vector2( -0.647064, -30.0887 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 flip_h = true
 hframes = 2
 frame = 1
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+[node name="AnimacionNormal" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Andando = SubResource( 2 )
-"anims/Dañado" = SubResource( 3 )
+anims/Andando = SubResource( 3 )
+"anims/Dañado" = SubResource( 4 )
+anims/Saltando = ExtResource( 4 )
+blend_times = [  ]
+
+[node name="AnimacionWilly" type="AnimationPlayer" parent="." index="5"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Animacion = ExtResource( 4 )
+"anims/Dañado" = SubResource( 5 )
 blend_times = [  ]
 
 

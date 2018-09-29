@@ -17,10 +17,10 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-velocidad = 10
-soyBalaEnemiga = false
+velocidad = 15
+soyBalaEnemiga = true
 tiempoDeVida = 1.0
-soyBoss = false
+soyBoss = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -28,7 +28,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-modulate = Color( 0.765625, 0.757073, 0.218323, 1 )
+modulate = Color( 0.941406, 0.27948, 0.931064, 1 )
 scale = Vector2( 1.03856, 1.03856 )
 texture = ExtResource( 2 )
 region_enabled = true
