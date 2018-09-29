@@ -19,7 +19,7 @@ func _ready():
 
 func _physics_process(delta):
 	personajeCerca(delta,raycast,-1,false)
-	personajeCerca(delta,raycast2,2,true)
+	personajeCerca(delta,raycast2,1,true)
 	gravedad()
 	
 

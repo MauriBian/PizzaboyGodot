@@ -36,7 +36,7 @@ func _ready():
 func _physics_process(delta):
 	contador += 1 * delta
 	gravedad()
-	Movimiento(1,false)
+	Rutina(1,false)
 	caer(delta)
 
 func _process(delta):
@@ -67,33 +67,34 @@ func caer(delta):
 		estoyEnElAire = false
 		
 			
-func Movimiento(dir,flip):
-
+func Rutina(dir,flip):
+#El mejor codigo nunca antes visto
 	if contador > 0 and contador < 2:
-		collision = move_and_collide(Vector2( -dir * velocidad,0))
+		Movimiento(-dir,velocidad)
 		normal.flip_h = true
 	if contador > 2 and contador < 4:
-		collision = move_and_collide(Vector2( dir * velocidad,0))
+		Movimiento(dir,velocidad)
 		normal.flip_h = false
 	if contador > 4 and contador < 6 :
-		collision = move_and_collide(Vector2( -dir * velocidad,0))
+		Movimiento(-dir,velocidad)
 		Saltar(true)
 	if contador > 6 and contador < 8:
-		collision = move_and_collide(Vector2( dir * velocidad,0))
+		Movimiento(dir,velocidad)
 		normal.flip_h = false
 		puedoSaltar = true
 	if contador > 8 and contador < 9.5:
-		collision = move_and_collide(Vector2( -dir * velocidad,0))
+		Movimiento(-dir,velocidad)
 		normal.flip_h = true
 	if contador > 9.5 and contador < 11:
-		collision = move_and_collide(Vector2( dir * velocidad,0))
+		Movimiento(dir,velocidad)
 		Saltar(false)
 	if contador > 11:
 		contador = 0
 		puedoSaltar = true
 	
 		
-		
+func Movimiento(dir,velocidad):
+	collision = move_and_collide(Vector2(dir* velocidad,0))
 		
 func golpieEnemigo(target):
 	if target.name == "Personaje":

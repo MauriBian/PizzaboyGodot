@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/Fondo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/FinalNivel.tscn" type="PackedScene" id=8]
 
-[node name="Nivel" type="Node2D" index="0"]
+[node name="Nivel" type="Node2D"]
 
 [node name="GameManager" parent="." index="0" instance=ExtResource( 1 )]
 
