@@ -19,7 +19,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 velocidad = 10
 soyBalaEnemiga = false
-tiempoDeVida = 1.0
+tiempoDeVida = 0.8
 soyBoss = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]

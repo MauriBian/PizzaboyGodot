@@ -14,7 +14,6 @@ export(PackedScene) var  bala
 var gameManager
 var puedoSaltar = true
 var apreteSaltar = false
-export var vida = 0
 var timer
 var puedoDisparar = true
 var monedas = 0
@@ -47,6 +46,10 @@ func Movimiento(delta):
 		velocidad = velocidadMovimiento
 	
 
+func muerte():
+	if collision != null and collision.collider.name == "TileMapMuerte":
+		self.pierdoUnaVida()
+	
 	
 func _physics_process(delta):	
 	Movimiento(delta)
@@ -56,6 +59,7 @@ func _physics_process(delta):
 	
 	
 func _process(delta):
+	muerte()
 	Disparo()
 	puedoSaltar()
 	ToqueEnemigo()
@@ -86,10 +90,9 @@ func ToqueEnemigo():
 		collision.collider.golpieEnemigo(self)
 
 func pierdoUnaVida():
-	vida -= 1
-	if vida == 0:
-		print("uf")
-		self.queue_free()
+	Puntaje.continues -= 1
+	get_tree().change_scene("res://Escenas/Continue.tscn")
+	Puntaje.ultimaEscena = get_tree().get_current_scene().filename
 	
 	
 func caer(delta):
@@ -124,9 +127,6 @@ func Disparo():
 		scene_instance.set_name("Bala")
 		gameManager.add_child(scene_instance)
 		scene_instance.translate(Vector2(self.position.x + estoyFlipando(40,scene_instance) ,self.position.y + 5))
-
-	
-
 
 
 	

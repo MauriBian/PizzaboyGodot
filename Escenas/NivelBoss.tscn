@@ -4,9 +4,9 @@
 [ext_resource path="res://Prefabs/GameManager.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Bala.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Escenas/MapaBoss.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Boss.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Fondo.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Boss.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Escenas/MapaBoss.tscn" type="PackedScene" id=7]
 
 [node name="NivelBoss" type="Node2D" index="0"]
 
@@ -27,16 +27,19 @@ velocidadMovimiento = 3
 salto = 18
 velocidadExtra = 4
 bala = ExtResource( 4 )
-vida = 1
 
-[node name="MapaBoss" parent="GameManager" index="2" instance=ExtResource( 5 )]
+[node name="Boss" parent="GameManager" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 7.40247, -3.70123 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 1098.45, 320.527 )
+vida = 30
+salto = 15
 
 [node name="ParallaxBackground" parent="GameManager" index="3" instance=ExtResource( 6 )]
 
-[node name="Camera2D" type="Camera2D" parent="GameManager" index="4"]
+offset = Vector2( 0, -150 )
+transform = Transform2D( 1, 0, 0, 1, 0, -150 )
+
+[node name="Camera2D" type="Camera2D" parent="GameManager/ParallaxBackground" index="3"]
 
 position = Vector2( 824.075, 296.985 )
 scale = Vector2( 1.35906, 1.35906 )
@@ -64,10 +67,9 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
-[node name="Boss" parent="GameManager" index="5" instance=ExtResource( 7 )]
+[node name="MapaBoss" parent="." index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 1098.45, 320.527 )
-vida = 30
-salto = 15
+position = Vector2( 6.29449, -2.59326 )
+_sections_unfolded = [ "Transform" ]
 
 

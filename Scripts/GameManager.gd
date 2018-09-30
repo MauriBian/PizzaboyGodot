@@ -1,5 +1,4 @@
 extends Node2D
-var puntaje
 var puntajeText
 var monedasText
 

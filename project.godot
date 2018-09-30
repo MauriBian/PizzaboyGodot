@@ -11,12 +11,12 @@ config_version=3
 [application]
 
 config/name="Plataformero"
-run/main_scene="res://Escenas/Nivel.tscn"
+run/main_scene="res://Escenas/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Puntaje="*res://Puntaje.gd"
+Puntaje="*res://Scripts/Puntaje.gd"
 
 [display]
 
