@@ -31,7 +31,7 @@ bala = ExtResource( 4 )
 [node name="Boss" parent="GameManager" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 1098.45, 320.527 )
-vida = 30
+vida = 40
 salto = 15
 
 [node name="ParallaxBackground" parent="GameManager" index="3" instance=ExtResource( 6 )]

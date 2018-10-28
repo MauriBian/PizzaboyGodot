@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/Fondo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/FinalNivel.tscn" type="PackedScene" id=8]
 
-[node name="Nivel" type="Node2D" index="0"]
+[node name="Nivel" type="Node2D"]
 
 [node name="GameManager" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -19,7 +19,7 @@ position = Vector2( 135.583, 370.82 )
 _sections_unfolded = [ "Transform", "collision" ]
 velocidadMovimiento = 3
 salto = 18
-velocidadExtra = 4
+velocidadExtra = 5
 bala = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="GameManager/Personaje" index="2"]

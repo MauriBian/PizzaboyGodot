@@ -36,7 +36,7 @@ func _ready():
 func _physics_process(delta):
 	contador += 1 * delta
 	gravedad()
-	Rutina(1,false)
+	Rutina(1)
 	caer(delta)
 
 func _process(delta):
@@ -67,7 +67,7 @@ func caer(delta):
 		estoyEnElAire = false
 		
 			
-func Rutina(dir,flip):
+func Rutina(dir):
 #El mejor codigo nunca antes visto
 	if contador > 0 and contador < 2:
 		Movimiento(-dir,velocidad)
